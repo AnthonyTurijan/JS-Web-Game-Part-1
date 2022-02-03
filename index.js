@@ -9,6 +9,7 @@ function newImage(url, left, bottom){
 
 function newItem(url, left, bottom){
     let item = newImage(url, left, bottom)
+    item.body
 }
 
 // sword.addEventListener('click', function(){
