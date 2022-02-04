@@ -1,3 +1,4 @@
+//add new image
 function newImage(url, left, bottom){
     let object = document.createElement('img')
     object.src = url
@@ -5,16 +6,17 @@ function newImage(url, left, bottom){
     object.style.left = left + 'px'
     object.style.bottom = bottom + 'px'
     document.body.append(object)
+    return object
 }
-
+//add new item
 function newItem(url, left, bottom){
     let item = newImage(url, left, bottom)
-    item.body
+    item.addEventListener('click', function (){
+        item.remove()
+    })
 }
 
-// sword.addEventListener('click', function(){
-//     sword.remove()
-// })
+
 
 newImage('assets/green-character.gif', 100, 100)
 newImage('assets/tree.png', 200, 300)
